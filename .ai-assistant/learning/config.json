@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "learning": {
+    "enabled": true,
+    "observation_path": ".ai-assistant/learning/observations/",
+    "patterns_path": ".ai-assistant/learning/patterns/",
+    "evolved_path": ".ai-assistant/learning/evolved/",
+    "max_observations_per_file": 1000,
+    "archive_after_days": 30
+  },
+  "patterns": {
+    "min_confidence": 0.3,
+    "auto_apply_threshold": 0.8,
+    "confidence_decay_rate": 0.02,
+    "max_patterns_per_domain": 50,
+    "confidence_boost_on_repeat": 0.05,
+    "confidence_penalty_on_correction": 0.1
+  },
+  "observer": {
+    "enabled": true,
+    "capture_events": [
+      "user_correction",
+      "repeated_action", 
+      "error_resolution",
+      "workflow_pattern",
+      "tool_preference",
+      "code_style_choice"
+    ],
+    "analysis_interval_minutes": 10,
+    "min_observations_for_pattern": 3
+  },
+  "evolution": {
+    "auto_evolve": false,
+    "cluster_threshold": 3,
+    "min_confidence_for_evolution": 0.7,
+    "evolution_types": ["rules", "skills", "agents", "commands"]
+  },
+  "domains": [
+    "code-style",
+    "architecture", 
+    "testing",
+    "workflow",
+    "debugging",
+    "performance",
+    "security",
+    "frontend-patterns",
+    "backend-patterns",
+    "git-workflow",
+    "documentation"
+  ],
+  "notifications": {
+    "show_learning_suggestions": true,
+    "show_confidence_changes": false,
+    "show_pattern_evolution": true,
+    "suggestion_threshold": 0.6
+  }
+}

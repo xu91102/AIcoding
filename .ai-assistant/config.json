@@ -1,0 +1,48 @@
+{
+  "framework": {
+    "name": "Universal AI Assistant Prompt Engineering Framework",
+    "version": "1.0.0",
+    "description": "通用 AI 助手 Prompt 工程框架",
+    "author": "AI Assistant Framework Team"
+  },
+  "platforms": {
+    "supported": [
+      "claude",
+      "chatgpt", 
+      "gemini",
+      "generic"
+    ],
+    "default": "generic"
+  },
+  "structure": {
+    "rules_path": "rules/",
+    "skills_path": "skills/",
+    "agents_path": "agents/",
+    "commands_path": "commands/",
+    "learning_path": "learning/"
+  },
+  "loading": {
+    "auto_load_rules": true,
+    "max_context_tokens": 50000,
+    "priority_modules": [
+      "rules/basic-settings.md",
+      "rules/coding-standards.md"
+    ]
+  },
+  "language": {
+    "primary": "zh-CN",
+    "technical_terms": "en",
+    "fallback": "en"
+  },
+  "features": {
+    "adaptive_learning": true,
+    "pattern_recognition": true,
+    "auto_evolution": false,
+    "team_collaboration": true
+  },
+  "customization": {
+    "allow_personal_config": true,
+    "personal_config_file": "config.personal.json",
+    "team_config_override": true
+  }
+}
